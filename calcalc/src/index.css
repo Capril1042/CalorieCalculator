@@ -13,6 +13,12 @@ code {
     monospace;
 }
 
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction:column;
+}
+
 .header {
   background-color: #ff6600;
   height: 10vh;
@@ -24,4 +30,61 @@ code {
   font-weight: 500;
   font-size: xx-large;
   line-height: 10vh;
+}
+
+.calculator {
+  width: 100vw;
+  height: 10vh;
+  margin-top: 30%;
+  justify-content: center;
+}
+
+.calculator-form {
+ border: 2px solid #000066;
+ width: 75vw;
+ height: 48vh;
+ margin: auto;
+}
+
+.form-header {
+  width: 100%;
+  background-color: #000066;
+  color: whitesmoke;
+  font-size:large;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.form-group {
+ width: 100%;
+ justify-content: left;
+ text-align: left;
+ padding-left: 2%;
+ padding-right: 2%;
+ margin: 3%;
+}
+
+input {
+  width: 15%;
+  border: thin solid #444444;
+}
+
+.form-submit {
+  text-align: center;
+  justify-content: center;
+  padding: 3%;
+}
+.form-submit input{
+  width: 35%;
+  font-size: medium;
+}
+
+.form-group label {
+  font-weight: 500;
+  font-size: medium;
+}
+
+.form-meat {
+  margin: 3%;
+  margin-top: 6%;
 }
