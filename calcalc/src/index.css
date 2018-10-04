@@ -88,3 +88,13 @@ input {
   margin: 3%;
   margin-top: 6%;
 }
+
+.activitybar{
+  display:flex;
+}
+
+.activitybox {
+  width:18%;
+  padding:1%;
+}
+

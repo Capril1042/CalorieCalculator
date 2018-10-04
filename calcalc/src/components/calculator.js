@@ -145,7 +145,7 @@ class Calculator extends Component {
             </div>
     {
         this.state.newData === true ?
-            < Results props={this.state}/>
+            < Results data={this.state}/>
             :null
     }
             </div>

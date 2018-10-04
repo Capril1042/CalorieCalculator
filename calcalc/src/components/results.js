@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Results extends Component {
     
     render() {
-    const data = this.props.props;
+    const data = this.props.data;
     console.log(data)
     let age= data.age;
     let weight = data.weight;
@@ -29,7 +29,28 @@ class Results extends Component {
         return (
             <div>
                 Results
-                <p>You Have a BMR of{Math.round(BMR)} </p>
+                <p>You Have a BMR of {Math.round(BMR)} calories
+                this means that your body burns about {Math.round(BMR)} calories in one day simply by being alive!
+                It is rare that someone would rest all day, your activity factor gives you a better estimate of your total 
+                calories burned. The chat below shows updated calculations of your total caloires burned based on how active you are.
+                </p>
+                <div className="activitybar"> 
+                <div className="activitybox a">
+                sedentary: <span>{Math.round(BMR *1.2)}cals </span>
+                </div>
+                <div className="activitybox b">
+                lightly active: <span>{Math.round(BMR*1.375)}cals</span>
+                </div>
+                <div className="activitybox c">
+                moderately active: <span>{Math.round(BMR*1.550)}cals</span>
+                </div>
+                <div className="activitybox d">
+                very active: <span> {Math.round(BMR*1.725)}cals </span>
+                </div>
+                <div className="activitybox e">
+                extra active: <span>{Math.round(BMR*1.9)}cals </span>
+                </div>
+                 </div>
             </div>
         )
     }
