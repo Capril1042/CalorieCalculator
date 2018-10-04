@@ -42,7 +42,7 @@ code {
 .calculator-form {
  border: 2px solid #000066;
  width: 75vw;
- height: 48vh;
+ height: auto;
  margin: auto;
 }
 
