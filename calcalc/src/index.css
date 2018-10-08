@@ -91,10 +91,52 @@ input {
 
 .activitybar{
   display:flex;
+  border:1px solid black;
+  margin:2%;
 }
 
 .activitybox {
   width:18%;
   padding:1%;
+}
+
+.activitybox span {
+  display:none;
+}
+
+.activitybox:hover span {
+  background-color:green;
+  display:block;
+}
+
+.a {
+background:#ff4000;
+}
+
+.b {
+  background:#ff8000;
+}
+
+.c {
+  background:#ffbf00;
+}
+
+.d {
+  background:#ffff00;
+}
+
+.e {
+  background:#bfff00;
+}
+.radioandlabel {
+  width:2vw;
+}
+
+@media only screen and (min-width: 600px) {
+
+.calculator {
+  margin-top:10%;
+}
+
 }
 

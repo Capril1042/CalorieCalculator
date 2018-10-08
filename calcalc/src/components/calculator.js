@@ -15,52 +15,45 @@ class Calculator extends Component {
                 newData: false
             
         };
-
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.setAge = this.setAge.bind(this);
-        this.setWeight = this.setWeight.bind(this);
-        this.setHeight = this.setHeight.bind(this);
-        this.setGender = this.setGender.bind(this);
-        this.setWeightUnits = this.setWeightUnits.bind(this);
-        this.setHeightUnits = this.setHeightUnits.bind(this);
     }
     
 
-    handleSubmit(e) {
+    handleSubmit=(e)=> {
         e.preventDefault();
-    this.setState({newData: true})
+    this.setState({newData: true});
+
    
     
   }
 
-    setAge(e) {
+    setAge=(e)=> {
         e.preventDefault();
         this.setState({age:e.target.value})
     }
 
-    setWeight(e) {
+    setWeight=(e)=> {
         e.preventDefault();
         this.setState({weight: e.target.value})
     }
 
-    setHeight(e) {
+    setHeight=(e)=> {
         e.preventDefault();
         this.setState({height: e.target.value})
     }
 
-    setGender(e){
+    setGender=(e)=>{
         
         this.setState({gender: e.target.value})
 
     }
 
-    setWeightUnits(e) {
+    setWeightUnits=(e)=> {
         
         this.setState({units:e.target.value})
 
     }
 
-    setHeightUnits(e) {
+    setHeightUnits=(e)=> {
         
         this.setState({heightUnits: e.target.value})
 
@@ -96,14 +89,14 @@ class Calculator extends Component {
                                 type="number" 
                                 name="weight" 
                                 value={this.state.weight}
-                                placeholder="175"
+                                placeholder="385"
                                 onChange={event => this.setWeight(event)}/>
                                 <div onChange={event => this.setWeightUnits(event)}>
-                                    <input 
+                                    <input className="radioandlabel"
                                     type="radio" 
                                     name="units" 
                                     value="lbs"/>lbs
-                                    <input 
+                                    <input className="radioandlabel"
                                     type="radio" 
                                     name="units" 
                                     value="kg"
@@ -116,8 +109,8 @@ class Calculator extends Component {
                                 Gender:
                                 <br></br>
                                 <div onChange={event => this.setGender(event)}>
-                                    <input type="radio" name="gender" value="male" defaultChecked/>male
-                                    <input type="radio" name="gender" value="female"/>female
+                                    <input className="radioandlabel" type="radio" name="gender" value="male" defaultChecked/>male
+                                    <input  className="radioandlabel"type="radio" name="gender" value="female"/>female
                                 </div>
                             </label>
                         </div>
@@ -129,18 +122,23 @@ class Calculator extends Component {
                                 type="number" 
                                 name="height" 
                                 value={this.state.height}
-                                placeholder="70"
+                                placeholder="177.8"
                                 onChange={event => this.setHeight(event)}/>
                                 <div onChange={event => this.setHeightUnits(event)}>
-                                    <input type="radio" name="heightUnits" value="inches"/>inches
-                                    <input type="radio" name="heightUnits" value="centimeters"defaultChecked/>cm
+                                    <input className="radioandlabel" type="radio" name="heightUnits" value="inches"/>inches
+                                    <input className="radioandlabel" type="radio" name="heightUnits" value="centimeters"defaultChecked/>cm
                                 </div>
                             </label>
                         </div>
                     </div>
+                       {
+        this.state.newData === false ?
+           
                         <div className="form-submit">
                             <input type="submit" value="Calculate!"/>
                         </div>   
+            :<div> change the inputs above for continous calculations</div>
+    }
                 </form>
             </div>
     {

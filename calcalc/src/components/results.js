@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class Results extends Component {
-    
+   
     render() {
     const data = this.props.data;
     console.log(data)
@@ -32,7 +32,8 @@ class Results extends Component {
                 <p>You Have a BMR of {Math.round(BMR)} calories
                 this means that your body burns about {Math.round(BMR)} calories in one day simply by being alive!
                 It is rare that someone would rest all day, your activity factor gives you a better estimate of your total 
-                calories burned. The chat below shows updated calculations of your total caloires burned based on how active you are.
+                calories burned. The chart below shows updated calculations of your total caloires burned based on how active you are. Hover over your 
+                amount of daily activity to see updated calculations.
                 </p>
                 <div className="activitybar"> 
                 <div className="activitybox a">
