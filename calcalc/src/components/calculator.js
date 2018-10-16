@@ -89,7 +89,7 @@ class Calculator extends Component {
                                 type="number" 
                                 name="weight" 
                                 value={this.state.weight}
-                                placeholder="385"
+                                placeholder="77.27"
                                 onChange={event => this.setWeight(event)}/>
                                 <div onChange={event => this.setWeightUnits(event)}>
                                     <input className="radioandlabel"

@@ -36,22 +36,25 @@ class Results extends Component {
                 amount of daily activity to see updated calculations.
                 </p>
                 <div className="activitybar"> 
-                <div className="activitybox a">
-                sedentary: <span>{Math.round(BMR *1.2)}cals </span>
-                </div>
-                <div className="activitybox b">
-                lightly active: <span>{Math.round(BMR*1.375)}cals</span>
-                </div>
-                <div className="activitybox c">
-                moderately active: <span>{Math.round(BMR*1.550)}cals</span>
-                </div>
-                <div className="activitybox d">
-                very active: <span> {Math.round(BMR*1.725)}cals </span>
-                </div>
-                <div className="activitybox e">
-                extra active: <span>{Math.round(BMR*1.9)}cals </span>
-                </div>
+                    <div className="activitybox a">
+                        sedentary: <span>{Math.round(BMR *1.2)}cals </span>
+                    </div>
+                    <div className="activitybox b">
+                        lightly active: <span>{Math.round(BMR*1.375)}cals</span>
+                    </div>
+                    <div className="activitybox c">
+                        moderately active: <span>{Math.round(BMR*1.550)}cals</span>
+                    </div>
+                    <div className="activitybox d">
+                        very active: <span> {Math.round(BMR*1.725)}cals </span>
+                    </div>
+                    <div className="activitybox e">
+                        extra active: <span>{Math.round(BMR*1.9)}cals </span>
+                    </div>
                  </div>
+
+                <p> In order to maintain a weight of {data.weight} {data.units} follow the recommendations above.</p>
+                
             </div>
         )
     }
